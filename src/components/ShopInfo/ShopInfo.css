@@ -1,0 +1,28 @@
+.jumbotron {
+  background-color: BurlyWood;
+  height: 600px;
+  color: Azure;
+  text-align: center;
+}
+
+.jumbotron_title {
+  margin-top: -40px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.jumbotron_content_wrapper {
+  margin-right: "10%";
+  text-align: "center";
+  margin-left: "10%";
+}
+
+.jumbotron_button {
+  margin-top: 80px;
+  font-size: 1.3rem;
+  border-color: white;
+  border-radius: 30px;
+  background-color: BurlyWood;
+  height: 45px;
+  width: 130px;
+}
