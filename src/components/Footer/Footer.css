@@ -1,0 +1,32 @@
+.footer_logo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.icons_container {
+  margin: 0 auto;
+  display: flex;
+  max-width: 90%;
+  justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid grey;
+}
+
+.footer {
+  background-color: Gainsboro;
+  height: 300px;
+  margin-top: 70px;
+}
+
+.footer_icon {
+  font-size: 40px;
+  margin-right: 25px;
+}
+
+.footer_copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: grey;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
