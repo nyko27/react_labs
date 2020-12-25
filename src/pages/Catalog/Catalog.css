@@ -13,6 +13,14 @@
   margin-left: 10%;
 }
 
+.input-form{
+  height: 37px;
+  width: 200px;
+  border: 1px solid honeydew;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
 .all_products_button {
   width: 13%;
   background-color: BurlyWood;

@@ -1,0 +1,29 @@
+.item-page{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.item-image{
+    border-radius: 30px;
+}
+
+.title{
+    font-size: 2rem;
+    color:lightslategray
+}
+
+.lower{
+    margin-top: 320px;
+    display: flex;
+}
+
+.price{
+    font-size: 3.6rem;
+    color: slategray;
+    padding-right: 300px;
+}
+.item-page-button{
+    margin-top: 20px;
+    margin-right: 30px;
+}
