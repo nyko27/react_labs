@@ -10,13 +10,16 @@ import {
 export default function Footer() {
   return (
     <div className="footer">
+      <br/>
+      <br/>
+      
       <div className="footer_logo">
         <img
           src="https://www.svgrepo.com/show/91797/cheese.svg"
           alt="logo"
           height="80px"
         />
-        <h3>Cheese market</h3>
+        
       </div>
       <div className="icons_container">
         <TwitterOutlined className="footer_icon" />

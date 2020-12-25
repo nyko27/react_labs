@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Row, Button } from "react-bootstrap";
 import Item from "../CheeseCard/CheeseCard";
-import "./List.css";
+import "./Catalog.css";
 
-export default function CheeseslList() {
+export default function Catalog() {
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1 className="list_title">Popular cheeses</h1>
+      <h1 className="list_title">CATALOG</h1>
       <Row className="items_row">
         <Col>
           <Item

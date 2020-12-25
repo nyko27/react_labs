@@ -14,16 +14,16 @@ export default function Header() {
             alt="logo"
             height="50px"
           />
-          <Nav.Link href="#home" style={{ fontSize: "1.1em" }}>
+          <Nav.Link href="/" style={{ fontSize: "1.1em" }}>
             Home
           </Nav.Link>
         </Nav>
 
         <Nav style={{ marginRight: "7%" }}>
-          <Nav.Link href="#catalog" style={{ fontSize: "1.1em" }}>
+          <Nav.Link href="catalog" style={{ fontSize: "1.1em" }}>
             Catalog
           </Nav.Link>
-          <Nav.Link href="#cart" style={{ fontSize: "1.1em" }}>
+          <Nav.Link href="cart" style={{ fontSize: "1.1em" }}>
             Cart
           </Nav.Link>
         </Nav>

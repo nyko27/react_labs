@@ -1,6 +1,7 @@
 .footer_logo {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  
 }
 
 .icons_container {
@@ -14,7 +15,7 @@
 
 .footer {
   background-color: Gainsboro;
-  height: 300px;
+  height: 290px;
   margin-top: 70px;
 }
 
