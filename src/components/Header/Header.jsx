@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {NavLink } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   return (
@@ -14,18 +16,18 @@ export default function Header() {
             alt="logo"
             height="50px"
           />
-          <Nav.Link href="/" style={{ fontSize: "1.1em" }}>
+          <NavLink to="/" className='nav_link' style={{marginTop: "10px"}} activeClassName="nav_link_active" exact={true}>
             Home
-          </Nav.Link>
+          </NavLink>
         </Nav>
 
         <Nav style={{ marginRight: "7%" }}>
-          <Nav.Link href="catalog" style={{ fontSize: "1.1em" }}>
+          <NavLink to="catalog"  className='nav_link' activeClassName="nav_link_active">
             Catalog
-          </Nav.Link>
-          <Nav.Link href="cart" style={{ fontSize: "1.1em" }}>
+          </NavLink>
+          <NavLink to="cart"  className='nav_link' activeClassName="nav_link_active">
             Cart
-          </Nav.Link>
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
