@@ -16,7 +16,7 @@
 .all_products_button {
   width: 13%;
   background-color: BurlyWood;
-  border: 1px solid DarkGoldenRod;
+  border: 1px solid azure;
   margin: 0 auto;
   border-radius: 17px;
   margin-top: 70px;
@@ -24,6 +24,6 @@
 }
 
 .all_products_button:hover {
-  background-color: DarkGoldenRod;
+  background-color: white;
   border-color: BurlyWood;
 }

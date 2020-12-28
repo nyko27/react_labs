@@ -1,12 +1,7 @@
 .card_button {
-  background-color: BurlyWood;
-  border: 1px solid BurlyWood;
-  border-radius: 10px;
-}
-
-.card_button:hover {
-  background-color: chocolate;
-  border-color: chocolate;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  
 }
 
 .item_card {    

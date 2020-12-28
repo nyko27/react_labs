@@ -26,3 +26,9 @@
   height: 45px;
   width: 130px;
 }
+
+.jumbotron_button:hover{
+  border-color: BurlyWood;
+  background-color: white;
+  color: BurlyWood;
+}
