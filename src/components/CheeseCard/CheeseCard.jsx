@@ -12,7 +12,7 @@ export default function CheeseCard(props) {
           <Card.Title>{props.title} </Card.Title>
           <Card.Text>{props.desc}</Card.Text>
           <Card.Text>{props.price}</Card.Text>
-          <Button className="card_button" variant="primary">
+          <Button className="card_button" variant="outline-dark">
             View more
           </Button>
         </Card.Body>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row, Button } from "react-bootstrap";
 import Item from "../CheeseCard/CheeseCard";
-import "./List.css";
+import "./CheesesList.css";
 
 export default function CheeseslList() {
   return (
@@ -50,11 +50,15 @@ export default function CheeseslList() {
             img="https://cdn.shopify.com/s/files/1/0363/6841/products/OxBlueBTB_copy_900x.jpg?v=1596050231"
           />
         </Col>
-        <Col></Col>
+        <Col>
+          <Item
+            title="Red Havk"
+            desc="very tasty"
+            price="400"
+            img="https://upload.wikimedia.org/wikipedia/commons/e/e5/Cowgirl_Creamery_Point_Reyes_-_Red_Hawk_cheese.jpg"
+          />
+        </Col>
       </Row>
-      <Button className='all_products_button' variant="primary" size="lg" block>
-        View more
-      </Button > 
     </div>
   );
 }
