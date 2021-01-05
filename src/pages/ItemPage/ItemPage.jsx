@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Row, Col, Button } from "react-bootstrap";
 import { getCheeseById } from "../../components/Api/api";
-import {addToCart} from "../../contexts/store/itemSlice";
+import {addToCart} from "../../store/itemSlice";
 import {useDispatch} from 'react-redux';
 import "./ItemPage.css";
 
