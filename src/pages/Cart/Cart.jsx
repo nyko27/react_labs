@@ -7,7 +7,7 @@ import {
   removeFromCart,
   decrement,
   increment,
-} from "../../contexts/store/itemSlice";
+} from "../../store/itemSlice";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cart.css";
 
