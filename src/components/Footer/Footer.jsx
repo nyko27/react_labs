@@ -27,7 +27,7 @@ export default function Footer() {
         <GoogleOutlined className="footer_icon" />
         <InstagramOutlined className="footer_icon" />
       </div>
-      <p className='footer_copyright' >© 2020 Cheese market. All rights reserved.</p>
+      <p className='footer_copyright' >2020 IoT©  Cheese Market . All rights reserved.</p>
     </div>
   );
 }
