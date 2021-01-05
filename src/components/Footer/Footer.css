@@ -14,9 +14,11 @@
 }
 
 .footer {
+  position: absolute;
   background-color: Gainsboro;
   height: 290px;
-  margin-top: 70px;
+  margin-top: 190px;
+  width: 100%;
 }
 
 .footer_icon {

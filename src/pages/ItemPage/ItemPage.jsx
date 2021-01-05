@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { cheesesContext } from "../../contexts/cheeses.jsx";
 import { Row, Col, Button } from "react-bootstrap";
+import { getCheeseById } from "../../components/Api/api";
+import {addToCart} from "../../contexts/store/itemSlice";
+import {useDispatch} from 'react-redux';
 import "./ItemPage.css";
 
 export default function ItemPage() {
-  const cheeses = React.useContext(cheesesContext);
+
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const cheese = cheeses.find((item) => item.id === parseInt(id));
+  const [cheese, setCheese] = useState({});
+
+ 
+  
+
+  async function getCheese() {
+    const item = await getCheeseById(id);
+    setCheese(item);
+  }
+  useEffect(() => getCheese(id), []);
 
   return (
     <div className="item-page">
@@ -34,7 +46,7 @@ export default function ItemPage() {
               </Button>
             </Link>
             <div>
-              <Button variant="outline-dark" className="item-page-button">
+              <Button onClick={()=> dispatch(addToCart(cheese))} variant="outline-dark" className="item-page-button">
                 Add to Cart
               </Button>
             </div>

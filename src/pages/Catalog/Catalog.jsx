@@ -9,17 +9,20 @@ import {
   Dropdown,
   Form,
   Card,
+  Spinner,
 } from "react-bootstrap";
 
 import {
   getСheeses,
   getCheesesFilteredByPrice,
   getCheesesFilteredByType,
-} from "../../api.js";
+  delay,
+} from "../../components/Api/api";
 import "./Catalog.css";
 
 export default function Catalog() {
   const [cheeses, setCheeses] = useState([]);
+  const [spinner, setSpinner] = useState('block');
   const [shownItemsCount, setShownItemsCount] = useState(0);
   const [filteredItems, setFilteredItems] = useState([]);
 
@@ -43,18 +46,24 @@ export default function Catalog() {
 
   useEffect(() => {
     (async () => {
+      await delay(500);
       setCheeses(await getСheeses());
+      setSpinner('none');
     })();
   }, []);
 
   async function setPriceFilter(price) {
+    setSpinner('block');
+    await delay(500);
     setFilteredItems(await getCheesesFilteredByPrice(price));
-    
-  } 
+    setSpinner('none');
+  }
 
   async function setTypeFilter(type) {
+    setSpinner('block');
+    await delay(500);
     setFilteredItems(await getCheesesFilteredByType(type));
-    
+    setSpinner('none');
   }
 
   return (
@@ -72,20 +81,40 @@ export default function Catalog() {
                 variant="dark"
                 title={variant}
               >
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Parmesan')} eventKey="1">
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Parmesan")}
+                  eventKey="1"
+                >
                   Parmesan
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Mozzarella')} eventKey="2">Mozzarella</Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Flawless')} eventKey="3">
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Mozzarella")}
+                  eventKey="2"
+                >
+                  Mozzarella
+                </Dropdown.Item>
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Flawless")}
+                  eventKey="3"
+                >
                   Flawless
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Oxford Blue')} eventKey="4">
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Oxford Blue")}
+                  eventKey="4"
+                >
                   Oxford Blue
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Swiss')} eventKey="5">
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Swiss")}
+                  eventKey="5"
+                >
                   Swiss
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setTypeFilter('Red Havk')} eventKey="6">
+                <Dropdown.Item
+                  onClick={async () => await setTypeFilter("Red Havk")}
+                  eventKey="6"
+                >
                   Red Havk
                 </Dropdown.Item>
               </DropdownButton>
@@ -99,18 +128,32 @@ export default function Catalog() {
                 variant="dark"
                 title={variant}
               >
-                <Dropdown.Item onClick={async()=> await setPriceFilter(200)} eventKey="1">
+                <Dropdown.Item
+                  onClick={async () => await setPriceFilter(200)}
+                  eventKey="1"
+                >
                   less than 200 $
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setPriceFilter(1000)} eventKey="2">
+                <Dropdown.Item
+                  onClick={async () => await setPriceFilter(1000)}
+                  eventKey="2"
+                >
                   less than 1000 $
                 </Dropdown.Item>
-                <Dropdown.Item onClick={async()=> await setPriceFilter(10000)} eventKey="3">
+                <Dropdown.Item
+                  onClick={async () => await setPriceFilter(10000)}
+                  eventKey="3"
+                >
                   less than 10000 $
                 </Dropdown.Item>
               </DropdownButton>
             ))}
           </div>
+        </div>
+        <div>
+          <Spinner style={{display: `${spinner}`}}className="spinner" animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
         </div>
         <div className="col2">
           <Form>
